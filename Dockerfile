@@ -17,7 +17,7 @@ RUN rm -rf ${APP_DIR}/*
 COPY ./webapp ${APP_DIR}
 
 # Optional: Custom Nginx config (uncomment if you have one)
-# COPY nginx.conf /etc/nginx/nginx.conf
+COPY nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 8080
 
