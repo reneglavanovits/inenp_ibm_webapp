@@ -14,10 +14,10 @@ ENV APP_DIR=/usr/share/nginx/html
 RUN rm -rf ${APP_DIR}/*
 
 # Copy UI5 app files (adjust if using a dist/build folder)
-COPY ./webapp ${APP_DIR}
+COPY ./dist ${APP_DIR}
 
 # Optional: Custom Nginx config (uncomment if you have one)
-COPY nginx.conf /etc/nginx/nginx.conf
+#COPY nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 8080
 
