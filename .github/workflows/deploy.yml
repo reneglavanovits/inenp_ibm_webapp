@@ -1,0 +1,26 @@
+name: Deploy to Exoscale VM
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: ${{ secrets.VM_HOST }}        # VM IP or hostname (store in GitHub secrets)
+          username: ${{ secrets.VM_USER }}    # VM username (e.g., root or ubuntu)
+          key: ${{ secrets.VM_SSH_KEY }}      # Private SSH key from secret
+          script: |
+            docker pull your-docker-image:latest
+            docker stop my-container || true
+            docker rm my-container || true
+            docker run -d --name my-container -p 80:80 your-docker-image:latest
