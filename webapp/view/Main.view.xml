@@ -1,0 +1,17 @@
+<mvc:View controllerName="at.hochschule.burgenland.inenpibm.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <List xmlns="sap.m" id="masterList" items="{employeeModel>/}" itemPress="onItemPress">
+                <headerToolbar>
+                    <Toolbar>
+                        <ToolbarSpacer/>
+                        <Button icon="sap-icon://add" type="Emphasized" press="addEmployee"/>
+                    </Toolbar>
+                </headerToolbar>
+                <StandardListItem title="{employeeModel>firstName} {employeeModel>lastName}" description="{employeeModel>role}" type="Active" />
+            </List>
+        </content>
+    </Page>
+</mvc:View>

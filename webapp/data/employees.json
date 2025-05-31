@@ -1,0 +1,32 @@
+[
+    {
+        "firstName": "Max",
+        "lastName": "Mustermann",
+        "age": 28,
+        "role": "DEVELOPER"
+    },
+    {
+        "firstName": "Anna",
+        "lastName": "Schmidt",
+        "age": 34,
+        "role": "ADMIN"
+    },
+    {
+        "firstName": "Lukas",
+        "lastName": "Fischer",
+        "age": 25,
+        "role": "SUPPORT"
+    },
+    {
+        "firstName": "Julia",
+        "lastName": "Klein",
+        "age": 30,
+        "role": "DEVELOPER"
+    },
+    {
+        "firstName": "Thomas",
+        "lastName": "Becker",
+        "age": 40,
+        "role": "ADMIN"
+    }
+]
